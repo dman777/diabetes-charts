@@ -13,12 +13,12 @@
       #snav
       class="sidebar-nav"
       role="navigation" 
-      mode="over"
+      mode="side"
       fixedTopGap="56"
       [opened]="!mobileQuery.matches"
       fixedInViewport="true">
       <mat-nav-list>
-        <a mat-list-item routerLink=".">
+        <a mat-list-item routerLink="today">
           <mat-icon>show_chart</mat-icon>Today
         </a>
         <a mat-list-item routerLink=".">
@@ -33,7 +33,7 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <p *ngFor="let content of fillerContent">{{content}}</p>
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

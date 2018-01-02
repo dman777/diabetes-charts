@@ -38,11 +38,14 @@ import {
 
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { TodayChartComponent } from './today-chart/today-chart.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    TodayChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +81,7 @@ import { AppComponent } from './app.component';
     MatToolbarModule,
     MatTooltipModule,
     MatStepperModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

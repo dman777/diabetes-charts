@@ -3,6 +3,7 @@ import {
   Component,
   ViewChild,
   AfterViewInit,
+  ViewEncapsulation,
   ElementRef
 } from '@angular/core';
 
@@ -12,11 +13,12 @@ import { MediaMatcher } from '@angular/cdk/layout';
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 
 // LEAVE OFF ... ADD BREAK POINT OBSERVER
 export class AppComponent implements AfterViewInit {
-   @ViewChild('snav') public snav: MdSidenav;
+   @ViewChild('snav') public snav;
 
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: (media) => void;
