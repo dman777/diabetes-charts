@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 
 import { MediaMatcher } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 
 // LEAVE OFF ... ADD BREAK POINT OBSERVER
 export class AppComponent implements AfterViewInit {
-   @ViewChild('snav') public snav;
+   @ViewChild('snav') public snav: MatSidenav;
 
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: (media) => void;

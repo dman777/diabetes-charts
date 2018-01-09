@@ -40,12 +40,20 @@ import {
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { TodayChartComponent } from './today-chart/today-chart.component';
+import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+import { LineChartComponent } from './line-chart/line-chart.component';
+import { GetChartDataService } from './get-chart-data.service';
+import { DaysFilterPipe } from './days-filter.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TodayChartComponent,
+    LineChartComponent,
+    DaysFilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -82,8 +90,12 @@ import { TodayChartComponent } from './today-chart/today-chart.component';
     MatTooltipModule,
     MatStepperModule,
     AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [],
+  providers: [GetChartDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

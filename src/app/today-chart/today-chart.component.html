@@ -1,7 +1,5 @@
-  today-chart works!
-  <div><h1> darinM</h1></div>
-  <div><h1> darinM</h1></div>
-  <div><h1> darinM</h1></div>
-  <div><h1> darinM</h1></div>
-  <div><h1> darinM</h1></div>
-  <div><h1> darinM</h1></div>
+<div>foo</div>
+<div *ngFor="let chart of charts | async | daysFilter:2">
+  <app-line-chart [curveData]="chart"></app-line-chart>
+</div>
+
