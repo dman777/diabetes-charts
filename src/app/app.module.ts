@@ -46,6 +46,8 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { GetChartDataService } from './get-chart-data.service';
 import { DaysFilterPipe } from './days-filter.pipe';
+import { LineChartService } from './line-chart.service';
+import { LineChartHelperService } from './line-chart-helper.service';
 
 
 @NgModule({
@@ -95,7 +97,7 @@ import { DaysFilterPipe } from './days-filter.pipe';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
-  providers: [GetChartDataService],
+  providers: [GetChartDataService, LineChartService, LineChartHelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

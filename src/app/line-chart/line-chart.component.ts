@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import * as d3 from 'd3';
 
 @Component({
   selector: 'app-line-chart',
@@ -8,6 +9,7 @@ import { Component, Input } from '@angular/core';
 export class LineChartComponent {
   @Input()
   curveData: Array<object>;
+  graphSize: String;
 
   constructor() { }
 }

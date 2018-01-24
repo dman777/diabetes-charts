@@ -40,7 +40,7 @@ export class InMemoryDataService  implements InMemoryDbService {
       }
     }
   createDb() {
-    const days: number[] = Array.from(new Array(15), (x, index) => index+1); 
+    const days: number[] = Array.from({length: 15}, (x, index) => index+1); 
     const curves: Curve[] = days.map(dayNumber => this.createCurve(dayNumber));
 
     return { curves };
