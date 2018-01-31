@@ -4,7 +4,7 @@ import * as moment from 'moment';
 @Injectable()
 export class LineChartHelperService {
   getTicks = (key, data) => {
-    var tickList = data.meta.map(function(element) {
+    var tickList = data.timestamps.map(function(element) {
       var value = element[key];
       return parseInt(value);
     });

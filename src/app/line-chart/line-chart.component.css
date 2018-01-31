@@ -1,0 +1,33 @@
+.axis path,
+.axis line {
+   fill: none;
+    stroke: #000;
+     shape-rendering: crispEdges;
+   }
+
+.x.axis path {
+}
+
+.graph-sheet {
+  display: flex;
+  background-color: #fafafa;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.large {
+  width: 700px;
+  height: 400px;
+}
+
+.med {
+  width: 600px;
+  height: 300px;
+}
+
+.small {
+  width: 400px;
+  height: 200px;
+}

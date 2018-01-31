@@ -1,5 +1,4 @@
-<div>foo</div>
-<div *ngFor="let chart of charts | async | daysFilter:2">
+<div *ngFor="let chart of charts | async | daysFilter:1">
   <app-line-chart [curveData]="chart"></app-line-chart>
 </div>
 
